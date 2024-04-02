@@ -6,4 +6,6 @@ export namespace AppUrls {
 
   }
 
+  export const Forbidden = 'app-forbidden-route';
+
 }

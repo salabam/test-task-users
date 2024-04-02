@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NotFoundComponent } from './core/pages/not-found/not-found.component';
+import { NotFoundComponent, ForbiddenComponent } from '@core/pages';
+
+const PAGES = [
+  NotFoundComponent,
+  ForbiddenComponent,
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    ...PAGES,
   ],
   imports: [
     BrowserModule,
